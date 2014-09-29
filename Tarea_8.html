@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+		<title>Creador de Cuadros</title> 
+		
+		<style type="text/css" media="screen">
+
+		
+		.cuadrito{
+			width:50px;
+			height:50px;
+			margin: 5px;
+			float: left;
+		}
+		   
+		
+		</style>
+		
+	  
+  
+	</head>
+	<body>
+    
+    	 <button onClick="myFunction()">Crear</button>
+		<input type="text" id="numero" value=""></input>
+		<div id="contenedor"></div>	
+  
+    
+    
+    <script type="text/javascript" charset="utf-8">
+	
+
+	
+	 colores = ["#068892", "#FF99CC", "#0099FF","#FF0AC2","#00CC33","#CC0033","#000099","#CC9900","#0099CC","#FF6600"];
+	
+			function myFunction(){
+	
+			numeroUsuario = document.getElementById("numero").value;
+			for (i = 1; i <= numeroUsuario; i++){
+					aleatorio = Math.floor(Math.random() *colores.length);
+					
+				jQuery("#contenedor").append('<div class="cuadrito" style="background:' + colores [aleatorio] + '"></div>')
+			}
+
+	
+		$(".cuadrito").mouseenter( function(){
+				$(this).animate({
+							width:"70px",
+							height: "70px",
+							},100)
+				});
+					$(".cuadrito").mouseleave( function(){
+						$(this).animate({
+								width:"50px",
+							height: "50px",
+						
+							},100)
+		});
+			
+		$('.cuadrito').click(function(e){    
+ 		   $(this).remove();
+     	  
+    });
+		
+		};
+	
+	
+    </script>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
