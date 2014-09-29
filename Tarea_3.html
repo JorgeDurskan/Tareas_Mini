@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Primer Ejemplo Javascript</title>
+<mete http-equiv="content-type"
+content="text/html; charset=utf-8" />
+
+	<style type="text/css" media="screen">
+	body{
+		margin:0;
+		padding:0;
+	}
+	#fondo{
+		width:100%;
+		height: 100%;
+		background:green;
+		position:fixed;
+		z-index:-9;
+		top:0;
+	}
+	</style>
+</head>
+
+<body>
+
+	<div id="fondo"></div>
+    
+
+	
+    <script type="text/javascript" charset="utf-8">
+	var colores = ["#00FF00","#FFFF00","#000000","#C0C0C0","#FF00FF","#00FFFF","#FFFFFF","·990033","#FF0066","#009933"];
+	
+	fondojs = document.getElementById("fondo");
+	fondojs.style.backgroundColor = colores[Math.floor(Math.random() * colores.length)];
+	
+	
+	 //dia ="http://www.parkerfordchurch.com/blog/wp-content/uploads/2013/12/Sunrise.jpg";
+	 //noche="http://daysgoneby.me/wp-content/uploads/2014/05/sunset_5-jpg.jpg";
+	
+		//fecha=new Date();
+	 	//hora=fecha.getHours();
+		//minutos=fecha.getMinutes();
+		
+		
+	//alert(Metal[2]);
+	
+	//if (time <= 12){
+		//dia} else{
+		//noche
+		//};
+
+ 	</script>
+</body>
+</html>
